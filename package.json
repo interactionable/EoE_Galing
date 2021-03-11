@@ -1,0 +1,42 @@
+{
+  "name": "GALING",
+  "version": "1.0.0",
+  "description": "GALING is part of Engines of Eternity by the SEADS collective",
+  "engines": {
+    "node": "12.x"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "asciiart-logo": "^0.2.6",
+    "body-parser": "^1.19.0",
+    "check-ip-address": "^1.1.3",
+    "express": "^4.17.1",
+    "livereload": "^0.9.1",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "reload": "^3.1.1",
+    "socket.io": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node index.js",
+    "startdev": "NODE_ENV=development nodemon server.js -e ejs,js,css,html,jpg,png,scss",
+    "build": "cd public/frontx; yarn build; cd ../..;",
+    "buildrun": "npm run-script build; supervisor .",
+    "deploy": "npm run-script build; gacp; supervisor ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/subtivdev/builder.git"
+  },
+  "keywords": [
+    "experimental",
+    "internal"
+  ],
+  "author": "Pieter Steyaert",
+  "license": "Copyright Pieter Steyaert",
+  "homepage": "https://bitbucket.org/subtivdev/builder#readme"
+}

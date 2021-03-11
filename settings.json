@@ -1,0 +1,31 @@
+{
+  "port": 2000,
+  "insecureport": 4080,
+  "publicDirectory": "public/frontx/build",
+  "intro": {
+    "font": "The Edge",
+    "lc": 10,
+    "pa": 2,
+    "ma": 3,
+    "border": "green",
+    "color": "blue",
+    "text": "green"
+  },
+  "structure": [
+    [
+      "a",
+      null
+    ],
+    [
+      "b",
+      "c"
+    ],
+    [
+      "d",
+      "e"
+    ]
+  ],
+  "minSound": 0.030579593564775614,
+  "maxSound": 0.20397461473327685,
+  "easing": 0.17787984758679085
+}

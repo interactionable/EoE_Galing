@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background-color: blue;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    min-height: 100vh;
+    
+}
+
+.bc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -110px;
+    width: 380px;
+    height: 100px;
+}
+
+.bcin {
+    background:white; 
+    background-color: white; 
+    border: solid black 10px; 
+    padding: 10px
+}
+
+.tc {
+    z-index: 100;
+    top: 50%;
+    font-size: 200%;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    width: 100vw;
+    color: fuchsia;
+    position: fixed;
+}
