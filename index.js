@@ -178,7 +178,8 @@ const startServer = () => {
             ID
           }) => {
             if (sockets.get(ID)) {
-              sockets.get(ID).emit("surround", direction);
+              // disable surround
+              // sockets.get(ID).emit("surround", direction);
             }
           })
         }

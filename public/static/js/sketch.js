@@ -299,7 +299,15 @@ const runSketch = (socket, development, minSound, maxSound, ID, easing, directio
             this.renderer.setRenderTarget(null);
 
             this.renderer.render(this.scene, this.camera);
-            window.requestAnimationFrame(() => this.render());
+
+            // slow down
+            setTimeout( ()=>{
+
+                window.requestAnimationFrame(() => this.render());
+        
+            }, 1000 / 21 );
+
+            // window.requestAnimationFrame(() => this.render());
 
             if (this.pr){
                 this.pr.update(this.chaos, this.live>0);
@@ -323,8 +331,9 @@ const runSketch = (socket, development, minSound, maxSound, ID, easing, directio
                     let dy = valy - this.direction.y;
                     this.direction.y += dy * 0.05;
 
-                    this.uniforms.reposition.value.setX(this.direction.x / 100.0)
-                    this.uniforms.reposition.value.setY(this.direction.y / 100.0)
+                    // disable surrounds
+                    // this.uniforms.reposition.value.setX(this.direction.x / 100.0)
+                    // this.uniforms.reposition.value.setY(this.direction.y / 100.0)
 
                 }
                 
@@ -392,7 +401,8 @@ const runSketch = (socket, development, minSound, maxSound, ID, easing, directio
 
     socket.on("surround", (direction)=>{
         // console.log("I am hearing sound! " + direction);
-        ge.neighbourLives[direction] += 1.5;
+        // disable surround
+        // ge.neighbourLives[direction] += 1.5;
     })
     // startTest()
 
